@@ -231,8 +231,6 @@ def ulist_to_html_node(block):
 def quote_to_html_node(block):
     lines = block.split("\n")
     new_lines = []
-    if not len(lines) > 1:
-        raise ValueError("Empty Quote Block")
     for line in lines:
         if line[0] != ">":
             raise ValueError(f"Quote block lines should start with: > not: {line[0]}")
