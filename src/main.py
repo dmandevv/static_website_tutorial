@@ -70,8 +70,8 @@ def generate_page(from_path, template_path, dest_path, basepath):
 
     template_content = template_content.replace("{{ Title }}", title)
     template_content = template_content.replace("{{ Content }}", html)
-    template_content = template_content.replace('href="/', 'href="{basepath}')
-    template_content = template_content.replace('src="/', 'src="{basepath}')
+    template_content = template_content.replace('href="/', 'href="' + basepath)
+    template_content = template_content.replace('src="/', 'src="' + basepath)
 
     dest_dir_path = os.path.dirname(dest_path)
 
